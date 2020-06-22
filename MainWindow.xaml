@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920">
     <Grid>
+        <Border x:Name="sub_cata" BorderThickness="0" Margin="692,210,380,0" Background="#FFEAEAEA"/>
+        <Border x:Name="cart" BorderThickness="0" Margin="0,210,1380,150" Background="#FFB8B8B8"/>
+        <Border x:Name="payment" BorderThickness="0" Margin="0,914,1380,0" Background="#FF208D2A"/>
+        <Border x:Name="qualifiers" BorderThickness="0" Margin="1540,210,0,0" Background="#FFD3DADA"/>
+        <Border x:Name="order_info" BorderThickness="0" Margin="0,0,1380,854" Background="#FFEAEAEA"/>
+        <Border x:Name="main_cata" BorderThickness="0" Margin="540,210,1228,0" Background="#FF4E7997"/>
+        <Border x:Name="navigation" BorderThickness="0" Margin="540,0,0,854" Background="#FFE9F5C7"/>
 
     </Grid>
 </Window>
