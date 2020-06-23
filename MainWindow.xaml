@@ -5,9 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindyCityPOS"
         mc:Ignorable="d"
-        Title="WindyCityPOS"
+        
+        Title="WindyCityPOS" 
+        
+        Height="1080" 
+        Width="1920" 
+        Background="White" 
+        Foreground="Black" 
+        VerticalAlignment="Center" 
+        HorizontalAlignment="Center"
+        
         WindowState="Maximized"
-        WindowStyle="None">
+        WindowStyle="None"
+        
+        >
     <Grid>
         <Border x:Name="sub_cata" BorderThickness="0" Margin="692,210,380,0" Background="#FFEAEAEA"/>
         <Border x:Name="cart" BorderThickness="0" Margin="0,210,1380,150" Background="#FFB8B8B8"/>
