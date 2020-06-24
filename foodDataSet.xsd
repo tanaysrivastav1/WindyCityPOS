@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="foodDataSet" targetNamespace="http://tempuri.org/foodDataSet.xsd" xmlns:mstns="http://tempuri.org/foodDataSet.xsd" xmlns="http://tempuri.org/foodDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=windycityserver.database.windows.net;Initial Catalog=food;Persist Security Info=True;User ID=webappAdmin;Password=appAdmin2001" IsAppSettingsProperty="false" Modifier="Assembly" Name="foodConnectionString" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="foodDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="False" msprop:Generator_DataSetName="foodDataSet" msprop:Generator_UserDSName="foodDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sub_cata" msprop:Generator_TableClassName="sub_cataDataTable" msprop:Generator_TableVarName="tablesub_cata" msprop:Generator_RowChangedName="sub_cataRowChanged" msprop:Generator_TablePropName="sub_cata" msprop:Generator_RowDeletingName="sub_cataRowDeleting" msprop:Generator_RowChangingName="sub_cataRowChanging" msprop:Generator_RowEvHandlerName="sub_cataRowChangeEventHandler" msprop:Generator_RowDeletedName="sub_cataRowDeleted" msprop:Generator_RowClassName="sub_cataRow" msprop:Generator_UserTableName="sub_cata" msprop:Generator_RowEvArgName="sub_cataRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sub_name" msprop:Generator_ColumnVarNameInTable="columnsub_name" msprop:Generator_ColumnPropNameInRow="sub_name" msprop:Generator_ColumnPropNameInTable="sub_nameColumn" msprop:Generator_UserColumnName="sub_name" type="xs:string" />
+              <xs:element name="final_price" msprop:Generator_ColumnVarNameInTable="columnfinal_price" msprop:Generator_ColumnPropNameInRow="final_price" msprop:Generator_ColumnPropNameInTable="final_priceColumn" msprop:Generator_UserColumnName="final_price" type="xs:string" minOccurs="0" />
+              <xs:element name="quantity" msprop:Generator_ColumnVarNameInTable="columnquantity" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="quantityColumn" msprop:Generator_UserColumnName="quantity" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="main_cata" msprop:Generator_TableClassName="main_cataDataTable" msprop:Generator_TableVarName="tablemain_cata" msprop:Generator_RowChangedName="main_cataRowChanged" msprop:Generator_TablePropName="main_cata" msprop:Generator_RowDeletingName="main_cataRowDeleting" msprop:Generator_RowChangingName="main_cataRowChanging" msprop:Generator_RowEvHandlerName="main_cataRowChangeEventHandler" msprop:Generator_RowDeletedName="main_cataRowDeleted" msprop:Generator_RowClassName="main_cataRow" msprop:Generator_UserTableName="main_cata" msprop:Generator_RowEvArgName="main_cataRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="main_name" msprop:Generator_ColumnVarNameInTable="columnmain_name" msprop:Generator_ColumnPropNameInRow="main_name" msprop:Generator_ColumnPropNameInTable="main_nameColumn" msprop:Generator_UserColumnName="main_name" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="qualifiers" msprop:Generator_TableClassName="qualifiersDataTable" msprop:Generator_TableVarName="tablequalifiers" msprop:Generator_RowChangedName="qualifiersRowChanged" msprop:Generator_TablePropName="qualifiers" msprop:Generator_RowDeletingName="qualifiersRowDeleting" msprop:Generator_RowChangingName="qualifiersRowChanging" msprop:Generator_RowEvHandlerName="qualifiersRowChangeEventHandler" msprop:Generator_RowDeletedName="qualifiersRowDeleted" msprop:Generator_RowClassName="qualifiersRow" msprop:Generator_UserTableName="qualifiers" msprop:Generator_RowEvArgName="qualifiersRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="item" msprop:Generator_ColumnVarNameInTable="columnitem" msprop:Generator_ColumnPropNameInRow="item" msprop:Generator_ColumnPropNameInTable="itemColumn" msprop:Generator_UserColumnName="item" type="xs:string" />
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:string" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="sub_cata" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sub_cata" />
+      <xs:field xpath="mstns:sub_name" />
+    </xs:unique>
+    <xs:unique name="DataTable2Key1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:main_cata" />
+      <xs:field xpath="mstns:main_name" />
+    </xs:unique>
+    <xs:unique name="qualifiersKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:qualifiers" />
+      <xs:field xpath="mstns:item" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="DataTable2_DataTable1" msdata:parent="main_cata" msdata:child="sub_cata" msdata:parentkey="main_name" msdata:childkey="sub_name" msprop:Generator_UserChildTable="sub_cata" msprop:Generator_ChildPropName="Getsub_cataRows" msprop:Generator_UserRelationName="DataTable2_DataTable1" msprop:Generator_ParentPropName="main_cataRow" msprop:Generator_RelationVarName="relationDataTable2_DataTable1" msprop:Generator_UserParentTable="main_cata" />
+      <msdata:Relationship name="sub_cata_qualifiers" msdata:parent="sub_cata" msdata:child="qualifiers" msdata:parentkey="sub_name" msdata:childkey="item" msprop:Generator_UserChildTable="qualifiers" msprop:Generator_ChildPropName="GetqualifiersRows" msprop:Generator_UserRelationName="sub_cata_qualifiers" msprop:Generator_RelationVarName="relationsub_cata_qualifiers" msprop:Generator_UserParentTable="sub_cata" msprop:Generator_ParentPropName="sub_cataRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
