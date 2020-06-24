@@ -165,6 +165,7 @@
                 <TextDecoration/>
             </TextBox.TextDecorations>
         </TextBox>
+        <Button Content="Options" HorizontalAlignment="Left" Margin="754,16,0,0" VerticalAlignment="Top" Width="75" Height="85" Click="Button_Click_2" Style="{DynamicResource RoundedButtonStyle}" FontSize="14"/>
 
     </Grid>
 </Window>
