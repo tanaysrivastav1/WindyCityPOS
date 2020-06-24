@@ -19,20 +19,152 @@
         WindowStyle="None"
         
         >
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" SnapsToDevicePixels="true" StrokeThickness="1" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#EAB01E"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#EAB01E"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#F1CA68"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#F1CA68"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <Border x:Name="sub_cata" BorderThickness="0" Margin="692,113,380,0" Background="#FFEAEAEA"/>
-        <Border x:Name="cart" BorderThickness="0" Margin="0,280,1380,110" Background="#FFB8B8B8"/>
-        <Border x:Name="payment" BorderThickness="0" Margin="0,970,1380,0" Background="#FF208D2A"/>
-        <Border x:Name="qualifiers" BorderThickness="0" Margin="1540,113,0,0" Background="#FFD3DADA"/>
-        <Border x:Name="order_info" BorderThickness="0" Margin="0,0,1380,800" Background="#FFEAEAEA"/>
-        <Border x:Name="main_cata" BorderThickness="0" Margin="540,0,1228,0" Background="#FF4E7997"/>
-        <Border x:Name="navigation" BorderThickness="0" Margin="692,0,0,967" Background="#FFE9F5C7"/>
-        <Button Content="Pick-Up Orders" HorizontalAlignment="Left" Margin="556,11,0,0" VerticalAlignment="Top" Height="95" Width="120" Click="Button_Click_1"/>
-        <Button Content="Drivers" HorizontalAlignment="Left" Margin="1564,16,0,0" VerticalAlignment="Top" Width="150" Height="85"/>
-        <Button Content="Records" HorizontalAlignment="Left" Margin="1746,16,0,0" VerticalAlignment="Top" Width="150" Height="85" Click="Button_Click"/>
-        <Button Content="Calculator" HorizontalAlignment="Left" Margin="1319,16,0,0" VerticalAlignment="Top" Width="75" Height="85" Click="Button_Click_2"/>
-        <Button Content="Weather" HorizontalAlignment="Left" Margin="1419,16,0,0" VerticalAlignment="Top" Width="75" Height="85" Click="Button_Click_2"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="1177,16,0,0" VerticalAlignment="Top" Width="75" Height="85" Click="Button_Click_2"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1271*"/>
+            <ColumnDefinition Width="649*"/>
+        </Grid.ColumnDefinitions>
+        <Border x:Name="sub_cata" BorderThickness="0" Margin="692,113,380,0" Background="#FFEAEAEA" Grid.ColumnSpan="2"/>
+        <Border x:Name="cart" BorderThickness="0" Margin="0,280,731,0" Background="#FFB8B8B8"/>
+        <Border x:Name="qualifiers" BorderThickness="0" Margin="269,113,0,0" Background="#FFD3DADA" Grid.Column="1"/>
+        <Border x:Name="order_info" BorderThickness="0" Margin="0,0,731,800" Background="#FFEAEAEA"/>
+        <Border x:Name="main_cata" BorderThickness="0" Margin="540,0,579,0" Background="#FF4E7997"/>
+        <Border x:Name="navigation" BorderThickness="0" Margin="692,0,0,967" Background="#FFE9F5C7" Grid.ColumnSpan="2"/>
+        <Button Content="Pick-Up Orders" HorizontalAlignment="Left" Margin="556,11,0,0" VerticalAlignment="Top" Height="95" Width="120" Click="Button_Click_1" Style="{DynamicResource RoundedButtonStyle}" FontSize="16" FontWeight="Normal"/>
+        <Button Content="Drivers" HorizontalAlignment="Left" Margin="293,16,0,0" VerticalAlignment="Top" Width="150" Height="85" Style="{DynamicResource RoundedButtonStyle}" FontSize="16" Grid.Column="1"/>
+        <Button Content="Records" HorizontalAlignment="Left" Margin="475,16,0,0" VerticalAlignment="Top" Width="150" Height="85" Click="Button_Click" Style="{DynamicResource RoundedButtonStyle}" FontSize="16" Grid.Column="1"/>
+        <Button Content="Calculator" HorizontalAlignment="Left" Margin="48,16,0,0" VerticalAlignment="Top" Width="75" Height="85" Click="Button_Click_2" Style="{DynamicResource RoundedButtonStyle}" FontSize="14" Grid.Column="1"/>
+        <Button Content="Weather" HorizontalAlignment="Left" Margin="148,16,0,0" VerticalAlignment="Top" Width="75" Height="85" Click="Button_Click_2" Style="{DynamicResource RoundedButtonStyle}" FontSize="14" Grid.Column="1"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="1177,16,0,0" VerticalAlignment="Top" Width="75" Height="85" Click="Button_Click_2" Style="{DynamicResource RoundedButtonStyle}" FontSize="14" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="75" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFF3535"/>
+                    <GradientStop Color="#FFFF3A3A" Offset="1"/>
+                    <GradientStop Color="#FFD32828" Offset="0.512"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Style="{DynamicResource RoundedButtonStyle}" Content="PAYMENT" Click="Button_Click_3" Margin="17,984,748,7" FontFamily="Gadugi" FontSize="48" FontWeight="Normal" FontStyle="Italic" FontStretch="UltraExpanded" Foreground="#FFFFF2F2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="83" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF1F8315" Offset="1"/>
+                    <GradientStop Color="#FF449C3B" Offset="0"/>
+                    <GradientStop Color="#FF29C119" Offset="0.48"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="For-Here" HorizontalAlignment="Left" Margin="209,16,0,0" VerticalAlignment="Top" Width="75" Height="85" Click="Button_Click_2" Style="{DynamicResource RoundedButtonStyle}" FontSize="14" FontWeight="Normal" FontStyle="Normal" FontFamily="Segoe UI" Background="#FFDDDDDD"/>
+        <Button Content="Pick-Up" HorizontalAlignment="Left" Margin="314,16,0,0" VerticalAlignment="Top" Width="75" Height="85" Click="Button_Click_2" Style="{DynamicResource RoundedButtonStyle}" FontSize="14"/>
+        <Button Content="Delivery" HorizontalAlignment="Left" Margin="417,16,0,0" VerticalAlignment="Top" Width="75" Height="85" Click="Button_Click_2" Style="{DynamicResource RoundedButtonStyle}" FontSize="14"/>
+        <TextBox HorizontalAlignment="Left" Margin="22,70,0,0" Text="Order Type:" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Height="43" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontWeight="Bold" FontSize="14"/>
+        <TextBox HorizontalAlignment="Left" Margin="22,26,0,0" Text="Order #: " TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TextChanged="TextBox_TextChanged" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontStyle="Normal" FontWeight="Bold"/>
+        <TextBox HorizontalAlignment="Left" Margin="22,124,0,0" Text="Phone:" TextWrapping="Wrap" VerticalAlignment="Top" Width="71" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" TextChanged="TextBox_TextChanged_2"/>
+        <TextBox HorizontalAlignment="Left" Margin="22,295,0,0" Text="Item" TextWrapping="Wrap" VerticalAlignment="Top" Width="71" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
+            <TextBox.TextDecorations>
+                <TextDecoration/>
+            </TextBox.TextDecorations>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="339,295,0,0" Text="Quantity" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
+            <TextBox.TextDecorations>
+                <TextDecoration/>
+            </TextBox.TextDecorations>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="454,295,0,0" Text="Price" TextWrapping="Wrap" VerticalAlignment="Top" Width="72" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
+            <TextBox.TextDecorations>
+                <TextDecoration/>
+            </TextBox.TextDecorations>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="22,156,0,0" Text="Name:" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold"/>
+        <TextBox HorizontalAlignment="Left" Margin="22,188,0,0" Text="Address:" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" TextChanged="TextBox_TextChanged_1"/>
+        <Button Content="Customer Editor" HorizontalAlignment="Left" Margin="61,225,0,0" VerticalAlignment="Top" Width="203" Height="38" Click="Button_Click_2" Style="{DynamicResource RoundedButtonStyle}" FontSize="14"/>
+        <TextBox HorizontalAlignment="Left" Margin="423,118,0,0" Text="Qualifiers" TextWrapping="Wrap" VerticalAlignment="Top" Width="72" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" Grid.Column="1" TextChanged="TextBox_TextChanged_3">
+            <TextBox.TextDecorations>
+                <TextDecoration/>
+            </TextBox.TextDecorations>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="1085,118,0,0" Text="Entrées" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
+            <TextBox.TextDecorations>
+                <TextDecoration/>
+            </TextBox.TextDecorations>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="592,118,0,0" Text="Main" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" TextChanged="TextBox_TextChanged_4">
+            <TextBox.TextDecorations>
+                <TextDecoration/>
+            </TextBox.TextDecorations>
+        </TextBox>
 
     </Grid>
 </Window>
