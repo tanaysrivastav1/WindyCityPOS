@@ -75,5 +75,10 @@ namespace WindyCityPOS
         {
             //clear
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

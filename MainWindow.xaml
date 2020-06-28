@@ -79,19 +79,26 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Border x:Name="navigation" BorderThickness="0" Margin="0,0,0,967" Background="#FF4A3F35"/>
-        <Button Content="Calculator" HorizontalAlignment="Left" Margin="1317,18,0,0" VerticalAlignment="Top" Height="81" Width="94" Click="Button_Click_11"/>
-        <Button Content="Weather" HorizontalAlignment="Left" Margin="1430,33,0,0" VerticalAlignment="Top" Height="55" Width="68" Click="Button_Click_12"/>
-        <Button Content="Options" HorizontalAlignment="Left" Margin="1762,25,0,0" VerticalAlignment="Top" Height="57" Width="84" Click="Button_Click_10"/>
-        <Button Content="Order Records" HorizontalAlignment="Left" Margin="458,23,0,0" VerticalAlignment="Top" Height="63" Width="106" Click="Button_Click_13"/>
-        <Button Content="Pick-Up Orders" HorizontalAlignment="Left" Margin="334,21,0,0" VerticalAlignment="Top" Height="67" Width="100" Click="Button_Click_9"/>
-        <Button Content="Drivers" HorizontalAlignment="Left" Margin="203,23,0,0" VerticalAlignment="Top" Height="63" Width="114" Click="Button_Click_14"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="1147,18,0,0" VerticalAlignment="Top" Height="71" Width="104" Click="Button_Click_5"/>
-        <Button Content="New Order" HorizontalAlignment="Left" Margin="39,18,0,0" VerticalAlignment="Top" Height="69" Width="137" Click="Button_Click_2"/>
-        <Button Content="Clear" HorizontalAlignment="Left" Margin="998,29,0,0" VerticalAlignment="Top" Height="51" Width="100" Click="Button_Click_15"/>
+        <Border x:Name="navigation" BorderThickness="0" Margin="0,0,0,967" Background="#FF4D5D66"/>
+        <Button Content="Calculator" HorizontalAlignment="Left" Margin="1623,19,0,0" VerticalAlignment="Top" Height="70" Width="60" Click="Button_Click_11" Style="{DynamicResource RoundedButtonStyle}" FontFamily="Gadugi"/>
+        <Button Content="Weather" HorizontalAlignment="Left" Margin="1706,19,0,0" VerticalAlignment="Top" Height="70" Width="60" Click="Button_Click_12" Style="{DynamicResource RoundedButtonStyle}" FontFamily="Gadugi"/>
+        <Button Content="Options" HorizontalAlignment="Left" Margin="1836,19,0,0" VerticalAlignment="Top" Height="70" Width="60" Click="Button_Click_10" Style="{DynamicResource RoundedButtonStyle}" FontSize="14" FontFamily="Gadugi"/>
+        <Button Content="Order Records" HorizontalAlignment="Left" Margin="538,19,0,0" VerticalAlignment="Top" Height="70" Width="140" Click="Button_Click_13" Style="{DynamicResource RoundedButtonStyle}" FontSize="16" FontFamily="Gadugi"/>
+        <Button Content="Pick-Up Orders" HorizontalAlignment="Left" Margin="364,19,0,0" VerticalAlignment="Top" Height="71" Width="140" Click="Button_Click_9" Style="{DynamicResource RoundedButtonStyle}" FontSize="16" FontFamily="Gadugi"/>
+        <Button Content="Drivers" HorizontalAlignment="Left" Margin="189,19,0,0" VerticalAlignment="Top" Height="70" Width="140" Click="Button_Click_14" Style="{DynamicResource RoundedButtonStyle}" FontSize="16" FontFamily="Gadugi"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="1304,19,0,0" VerticalAlignment="Top" Height="70" Width="80" Click="Button_Click_5" Style="{DynamicResource RoundedButtonStyle}" FontSize="16" FontFamily="Gadugi" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC51717" Offset="1"/>
+                    <GradientStop Color="#FFB41717"/>
+                    <GradientStop Color="#FFE23A3A" Offset="0.475"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="New Order" HorizontalAlignment="Left" Margin="20,19,0,0" VerticalAlignment="Top" Height="70" Width="140" Click="Button_Click_2" Style="{DynamicResource RoundedButtonStyle}" FontSize="16" FontFamily="Gadugi"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="1203,19,0,0" VerticalAlignment="Top" Height="70" Width="80" Click="Button_Click_15" Style="{DynamicResource RoundedButtonStyle}" FontSize="16" FontFamily="Gadugi"/>
 
-        <Grid/>
-
-        <Frame x:Name="Main" Margin="0,113,0,0" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="Main" Margin="0,113,0,1" NavigationUIVisibility="Hidden"/>
+        <TextBox HorizontalAlignment="Left" Margin="830,19,0,0" Text="WindyPOSbeta" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="49" Background="{x:Null}" Foreground="White" FontSize="26" FontFamily="MV Boli" FontWeight="Bold" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}"/>
     </Grid>
 </Window>
