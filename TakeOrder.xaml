@@ -21,41 +21,6 @@
         <Button Content="Delivery" HorizontalAlignment="Left" Margin="470,34,0,0" VerticalAlignment="Top" Height="60" Width="94"/>
         <Button Content="Customer Editor" HorizontalAlignment="Left" Margin="84,213,0,0" VerticalAlignment="Top" Height="36" Width="148"/>
         <Button Content="For-Here" HorizontalAlignment="Left" Margin="230,44,0,0" VerticalAlignment="Top" Height="56" Width="98"/>
-        <TextBox HorizontalAlignment="Left" Margin="18,57,0,0" Text="Order Type:" TextWrapping="Wrap" VerticalAlignment="Top" Width="93" Height="37" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontWeight="Bold" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Margin="18,17,0,0" Text="Order #: " TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TextChanged="TextBox_TextChanged" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontStyle="Normal" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="21,112,0,0" Text="Phone:" TextWrapping="Wrap" VerticalAlignment="Top" Width="71" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" TextChanged="TextBox_TextChanged_2"/>
-        <TextBox HorizontalAlignment="Left" Margin="21,144,0,0" Text="Name:" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="21,176,0,0" Text="Address:" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" TextChanged="TextBox_TextChanged_1"/>
-        <TextBox HorizontalAlignment="Left" Margin="38,276,0,0" Text="Item" TextWrapping="Wrap" VerticalAlignment="Top" Width="71" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
-            <TextBox.TextDecorations>
-                <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="355,276,0,0" Text="Quantity" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
-            <TextBox.TextDecorations>
-                <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="492,276,0,0" Text="Price" TextWrapping="Wrap" VerticalAlignment="Top" Width="72" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
-            <TextBox.TextDecorations>
-                <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="1687,17,0,0" Text="Qualifiers" TextWrapping="Wrap" VerticalAlignment="Top" Width="72" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" TextChanged="TextBox_TextChanged_3">
-            <TextBox.TextDecorations>
-                <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="1124,17,0,0" Text="Entrées" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
-            <TextBox.TextDecorations>
-                <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="655,17,0,0" Text="Main" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" TextChanged="TextBox_TextChanged_4">
-            <TextBox.TextDecorations>
-                <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
 
     </Grid>
 </Page>

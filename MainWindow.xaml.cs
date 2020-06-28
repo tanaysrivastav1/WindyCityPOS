@@ -67,7 +67,12 @@ namespace WindyCityPOS
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
+            //Calculator Button
+            CalculatorWindow calculator = new CalculatorWindow();
+            calculator.Show();
 
+
+       
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
