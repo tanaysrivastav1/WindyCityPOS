@@ -87,23 +87,6 @@
         <Border x:Name="order_info" BorderThickness="0" Margin="0,0,731,800" Background="#FFEAEAEA"/>
         <Border x:Name="main_cata" BorderThickness="0" Margin="540,0,579,0" Background="#FF4E7997"/>
         <Border x:Name="navigation" BorderThickness="0" Margin="692,0,0,967" Background="#FFE9F5C7" Grid.ColumnSpan="2"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="1177,16,0,0" VerticalAlignment="Top" Width="75" Height="85" Click="Button_Click_2" Style="{DynamicResource RoundedButtonStyle}" FontSize="14" Foreground="White">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform Angle="75" CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FFFF3535"/>
-                    <GradientStop Color="#FFFF3A3A" Offset="1"/>
-                    <GradientStop Color="#FFD32828" Offset="0.512"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
         <Button Style="{DynamicResource RoundedButtonStyle}" Content="PAYMENT" Click="Button_Click_3" Margin="17,984,748,7" FontFamily="Gadugi" FontSize="48" FontWeight="Normal" FontStyle="Italic" FontStretch="UltraExpanded" Foreground="#FFFFF2F2">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -166,6 +149,7 @@
         <Button Content="Customer Editor" HorizontalAlignment="Left" Margin="50,225,0,0" VerticalAlignment="Top" Height="42" Width="179" Style="{DynamicResource RoundedButtonStyle}"/>
         <Button Content="Pick-Up Orders" HorizontalAlignment="Left" Margin="566,27,0,0" VerticalAlignment="Top" Height="67" Width="100"/>
         <Button Content="Drivers" Grid.Column="1" HorizontalAlignment="Left" Margin="354,29,0,0" VerticalAlignment="Top" Height="45" Width="74"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="1147,18,0,0" VerticalAlignment="Top" Height="71" Width="104"/>
 
     </Grid>
 </Window>
