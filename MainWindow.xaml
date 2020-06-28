@@ -85,10 +85,10 @@
         <Button Content="Options" HorizontalAlignment="Left" Margin="1762,25,0,0" VerticalAlignment="Top" Height="57" Width="84" Click="Button_Click_10"/>
         <Button Content="Order Records" HorizontalAlignment="Left" Margin="458,23,0,0" VerticalAlignment="Top" Height="63" Width="106" Click="Button_Click_13"/>
         <Button Content="Pick-Up Orders" HorizontalAlignment="Left" Margin="334,21,0,0" VerticalAlignment="Top" Height="67" Width="100" Click="Button_Click_9"/>
-        <Button Content="Drivers" HorizontalAlignment="Left" Margin="203,23,0,0" VerticalAlignment="Top" Height="63" Width="114"/>
+        <Button Content="Drivers" HorizontalAlignment="Left" Margin="203,23,0,0" VerticalAlignment="Top" Height="63" Width="114" Click="Button_Click_14"/>
         <Button Content="Delete" HorizontalAlignment="Left" Margin="1147,18,0,0" VerticalAlignment="Top" Height="71" Width="104" Click="Button_Click_5"/>
-        <Button Content="New Order" HorizontalAlignment="Left" Margin="39,18,0,0" VerticalAlignment="Top" Height="69" Width="137"/>
-        <Button Content="Clear" HorizontalAlignment="Left" Margin="998,29,0,0" VerticalAlignment="Top" Height="51" Width="100"/>
+        <Button Content="New Order" HorizontalAlignment="Left" Margin="39,18,0,0" VerticalAlignment="Top" Height="69" Width="137" Click="Button_Click_2"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="998,29,0,0" VerticalAlignment="Top" Height="51" Width="100" Click="Button_Click_15"/>
         <Border BorderThickness="1" BorderBrush="Black" Margin="0,113,0,0" Background="#FFF4F6FF"/>
 
     </Grid>
