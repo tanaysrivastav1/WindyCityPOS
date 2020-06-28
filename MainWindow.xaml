@@ -139,17 +139,17 @@
                 <TextDecoration/>
             </TextBox.TextDecorations>
         </TextBox>
-        <Button Content="Calculator" HorizontalAlignment="Left" Margin="46,18,0,0" VerticalAlignment="Top" Height="81" Width="94" Grid.Column="1"/>
-        <Button Content="Weather" Grid.Column="1" HorizontalAlignment="Left" Margin="201,31,0,0" VerticalAlignment="Top" Height="55" Width="68"/>
-        <Button Content="Options" HorizontalAlignment="Left" Margin="744,23,0,0" VerticalAlignment="Top" Height="57" Width="83"/>
-        <Button Content="Records" Grid.Column="1" HorizontalAlignment="Left" Margin="495,27,0,0" VerticalAlignment="Top" Height="67" Width="99"/>
-        <Button Content="For-Here" HorizontalAlignment="Left" Margin="215,42,0,0" VerticalAlignment="Top" Height="64" Width="75"/>
-        <Button Content="Pick-Up" HorizontalAlignment="Left" Margin="339,37,0,0" VerticalAlignment="Top" Height="64" Width="50"/>
+        <Button Content="Calculator" HorizontalAlignment="Left" Margin="46,18,0,0" VerticalAlignment="Top" Height="81" Width="94" Grid.Column="1" Click="Button_Click_11"/>
+        <Button Content="Weather" Grid.Column="1" HorizontalAlignment="Left" Margin="201,31,0,0" VerticalAlignment="Top" Height="55" Width="68" Click="Button_Click_12"/>
+        <Button Content="Options" HorizontalAlignment="Left" Margin="744,23,0,0" VerticalAlignment="Top" Height="57" Width="83" Click="Button_Click_10"/>
+        <Button Content="Records" Grid.Column="1" HorizontalAlignment="Left" Margin="495,27,0,0" VerticalAlignment="Top" Height="67" Width="99" Click="Button_Click_13"/>
+        <Button Content="For-Here" HorizontalAlignment="Left" Margin="215,42,0,0" VerticalAlignment="Top" Height="64" Width="75" Click="Button_Click_7"/>
+        <Button Content="Pick-Up" HorizontalAlignment="Left" Margin="339,37,0,0" VerticalAlignment="Top" Height="64" Width="50" Click="Button_Click_8"/>
         <Button Content="Delivery" HorizontalAlignment="Left" Margin="435,30,0,0" VerticalAlignment="Top" Height="71" Width="72" Click="Button_Click_4"/>
-        <Button Content="Customer Editor" HorizontalAlignment="Left" Margin="50,225,0,0" VerticalAlignment="Top" Height="42" Width="179" Style="{DynamicResource RoundedButtonStyle}"/>
-        <Button Content="Pick-Up Orders" HorizontalAlignment="Left" Margin="566,27,0,0" VerticalAlignment="Top" Height="67" Width="100"/>
+        <Button Content="Customer Editor" HorizontalAlignment="Left" Margin="50,225,0,0" VerticalAlignment="Top" Height="42" Width="179" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click_6"/>
+        <Button Content="Pick-Up Orders" HorizontalAlignment="Left" Margin="566,27,0,0" VerticalAlignment="Top" Height="67" Width="100" Click="Button_Click_9"/>
         <Button Content="Drivers" Grid.Column="1" HorizontalAlignment="Left" Margin="354,29,0,0" VerticalAlignment="Top" Height="45" Width="74"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="1147,18,0,0" VerticalAlignment="Top" Height="71" Width="104"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="1147,18,0,0" VerticalAlignment="Top" Height="71" Width="104" Click="Button_Click_5"/>
 
     </Grid>
 </Window>

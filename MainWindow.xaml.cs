@@ -35,11 +35,6 @@ namespace WindyCityPOS
 
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-           
-        }
-
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
 
@@ -71,6 +66,51 @@ namespace WindyCityPOS
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_10(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_11(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_12(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_13(object sender, RoutedEventArgs e)
         {
 
         }
