@@ -8,8 +8,7 @@
         
         Title="WindyCityPOS" 
         
-        Height="1080" 
-        Width="1920" 
+        
         Background="White" 
         Foreground="Black" 
         VerticalAlignment="Center" 
@@ -76,80 +75,21 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid>
+    <Grid Width="1920" Height="1080">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1271*"/>
-            <ColumnDefinition Width="649*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Border x:Name="sub_cata" BorderThickness="0" Margin="692,113,380,0" Background="#FFEAEAEA" Grid.ColumnSpan="2"/>
-        <Border x:Name="cart" BorderThickness="0" Margin="0,280,731,0" Background="#FFB8B8B8"/>
-        <Border x:Name="qualifiers" BorderThickness="0" Margin="269,113,0,0" Background="#FFD3DADA" Grid.Column="1"/>
-        <Border x:Name="order_info" BorderThickness="0" Margin="0,0,731,800" Background="#FFEAEAEA"/>
-        <Border x:Name="main_cata" BorderThickness="0" Margin="540,0,579,0" Background="#FF4E7997"/>
-        <Border x:Name="navigation" BorderThickness="0" Margin="692,0,0,967" Background="#FFE9F5C7" Grid.ColumnSpan="2"/>
-        <Button Style="{DynamicResource RoundedButtonStyle}" Content="PAYMENT" Click="Button_Click_3" Margin="17,984,748,7" FontFamily="Gadugi" FontSize="48" FontWeight="Normal" FontStyle="Italic" FontStretch="UltraExpanded" Foreground="#FFFFF2F2">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform Angle="83" CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FF1F8315" Offset="1"/>
-                    <GradientStop Color="#FF449C3B" Offset="0"/>
-                    <GradientStop Color="#FF29C119" Offset="0.48"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <TextBox HorizontalAlignment="Left" Margin="22,70,0,0" Text="Order Type:" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Height="43" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontWeight="Bold" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Margin="22,26,0,0" Text="Order #: " TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TextChanged="TextBox_TextChanged" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontStyle="Normal" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="22,124,0,0" Text="Phone:" TextWrapping="Wrap" VerticalAlignment="Top" Width="71" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" TextChanged="TextBox_TextChanged_2"/>
-        <TextBox HorizontalAlignment="Left" Margin="22,295,0,0" Text="Item" TextWrapping="Wrap" VerticalAlignment="Top" Width="71" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
-            <TextBox.TextDecorations>
-                <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="339,295,0,0" Text="Quantity" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
-            <TextBox.TextDecorations>
-                <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="454,295,0,0" Text="Price" TextWrapping="Wrap" VerticalAlignment="Top" Width="72" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
-            <TextBox.TextDecorations>
-                <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="22,156,0,0" Text="Name:" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="22,188,0,0" Text="Address:" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" TextChanged="TextBox_TextChanged_1"/>
-        <TextBox HorizontalAlignment="Left" Margin="423,118,0,0" Text="Qualifiers" TextWrapping="Wrap" VerticalAlignment="Top" Width="72" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" Grid.Column="1" TextChanged="TextBox_TextChanged_3">
-            <TextBox.TextDecorations>
-                <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="1085,118,0,0" Text="Entrées" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
-            <TextBox.TextDecorations>
-                <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="592,118,0,0" Text="Main" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" TextChanged="TextBox_TextChanged_4">
-            <TextBox.TextDecorations>
-                <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <Button Content="Calculator" HorizontalAlignment="Left" Margin="46,18,0,0" VerticalAlignment="Top" Height="81" Width="94" Grid.Column="1" Click="Button_Click_11"/>
-        <Button Content="Weather" Grid.Column="1" HorizontalAlignment="Left" Margin="201,31,0,0" VerticalAlignment="Top" Height="55" Width="68" Click="Button_Click_12"/>
-        <Button Content="Options" HorizontalAlignment="Left" Margin="744,23,0,0" VerticalAlignment="Top" Height="57" Width="83" Click="Button_Click_10"/>
-        <Button Content="Records" Grid.Column="1" HorizontalAlignment="Left" Margin="495,27,0,0" VerticalAlignment="Top" Height="67" Width="99" Click="Button_Click_13"/>
-        <Button Content="For-Here" HorizontalAlignment="Left" Margin="215,42,0,0" VerticalAlignment="Top" Height="64" Width="75" Click="Button_Click_7"/>
-        <Button Content="Pick-Up" HorizontalAlignment="Left" Margin="339,37,0,0" VerticalAlignment="Top" Height="64" Width="50" Click="Button_Click_8"/>
-        <Button Content="Delivery" HorizontalAlignment="Left" Margin="435,30,0,0" VerticalAlignment="Top" Height="71" Width="72" Click="Button_Click_4"/>
-        <Button Content="Customer Editor" HorizontalAlignment="Left" Margin="50,225,0,0" VerticalAlignment="Top" Height="42" Width="179" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click_6"/>
-        <Button Content="Pick-Up Orders" HorizontalAlignment="Left" Margin="566,27,0,0" VerticalAlignment="Top" Height="67" Width="100" Click="Button_Click_9"/>
-        <Button Content="Drivers" Grid.Column="1" HorizontalAlignment="Left" Margin="354,29,0,0" VerticalAlignment="Top" Height="45" Width="74"/>
+        <Border x:Name="navigation" BorderThickness="0" Margin="0,0,0,967" Background="#FF4A3F35"/>
+        <Button Content="Calculator" HorizontalAlignment="Left" Margin="1317,18,0,0" VerticalAlignment="Top" Height="81" Width="94" Click="Button_Click_11"/>
+        <Button Content="Weather" HorizontalAlignment="Left" Margin="1430,33,0,0" VerticalAlignment="Top" Height="55" Width="68" Click="Button_Click_12"/>
+        <Button Content="Options" HorizontalAlignment="Left" Margin="1762,25,0,0" VerticalAlignment="Top" Height="57" Width="84" Click="Button_Click_10"/>
+        <Button Content="Order Records" HorizontalAlignment="Left" Margin="458,23,0,0" VerticalAlignment="Top" Height="63" Width="106" Click="Button_Click_13"/>
+        <Button Content="Pick-Up Orders" HorizontalAlignment="Left" Margin="334,21,0,0" VerticalAlignment="Top" Height="67" Width="100" Click="Button_Click_9"/>
+        <Button Content="Drivers" HorizontalAlignment="Left" Margin="203,23,0,0" VerticalAlignment="Top" Height="63" Width="114"/>
         <Button Content="Delete" HorizontalAlignment="Left" Margin="1147,18,0,0" VerticalAlignment="Top" Height="71" Width="104" Click="Button_Click_5"/>
+        <Button Content="New Order" HorizontalAlignment="Left" Margin="39,18,0,0" VerticalAlignment="Top" Height="69" Width="137"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="998,29,0,0" VerticalAlignment="Top" Height="51" Width="100"/>
+        <Border BorderThickness="1" BorderBrush="Black" Margin="0,113,0,0" Background="#FFF4F6FF"/>
 
     </Grid>
 </Window>
