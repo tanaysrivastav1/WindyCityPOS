@@ -60,11 +60,15 @@ namespace WindyCityPOS
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             //new order
+
+            Main.Content = new TakeOrder();
         }
 
         private void Button_Click_14(object sender, RoutedEventArgs e)
         {
             //drivers
+
+            Main.Content = new DriversPage();
         }
 
         private void Button_Click_15(object sender, RoutedEventArgs e)

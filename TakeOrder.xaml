@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WindyCityPOS"
       mc:Ignorable="d"
-      Title="TakeOrder" Height="1080" Width="1920">
+      Title="TakeOrder" Height="967" Width="1920" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -15,7 +15,7 @@
         <Border BorderThickness="1" Margin="590,0,1152,0" Background="#FF0FABBC"/>
         <Border BorderThickness="1" Margin="768,0,394,0" Background="#FFE4F9FF"/>
         <Border BorderThickness="1" Margin="1526,0,0,0" Background="#FFD4F3EF"/>
-        <Border BorderThickness="1" Margin="0,0,1330,823" Background="#FFABF0E9"/>
+        <Border BorderThickness="1" Margin="0,0,1330,710" Background="#FFABF0E9"/>
         <Button Content="Payment" HorizontalAlignment="Left" Margin="63,975,0,0" VerticalAlignment="Top" Height="80" Width="431"/>
         <Button Content="Pick-Up" HorizontalAlignment="Left" Margin="342,34,0,0" VerticalAlignment="Top" Height="66" Width="100"/>
         <Button Content="Delivery" HorizontalAlignment="Left" Margin="470,34,0,0" VerticalAlignment="Top" Height="60" Width="94"/>

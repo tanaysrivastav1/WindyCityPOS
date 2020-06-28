@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace WindyCityPOS
 {
     /// <summary>
-    /// Interaction logic for Drivers.xaml
+    /// Interaction logic for DriversPage.xaml
     /// </summary>
-    public partial class Drivers : Page
+    public partial class DriversPage : Page
     {
-        public Drivers()
+        public DriversPage()
         {
             InitializeComponent();
         }
