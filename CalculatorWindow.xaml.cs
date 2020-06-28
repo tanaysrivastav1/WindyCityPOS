@@ -89,7 +89,7 @@ namespace WindyCityPOS
 
         private void Off_Click_1(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            this.Close();
         }
 
         private void Del_Click(object sender, RoutedEventArgs e)
