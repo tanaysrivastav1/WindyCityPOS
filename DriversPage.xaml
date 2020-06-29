@@ -4,15 +4,39 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WindyCityPOS"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="DriversPage" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="1920" Height="967">
+      mc:Ignorable="d"
+      Title="DriversPage" Height="967" Width="1920" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
 
     <Grid>
-        <Border BorderThickness="1" Margin="0,0,745,0" Background="#FFE4F9FF"/>
-        <Border BorderThickness="1" BorderBrush="Black" Margin="55,225,368,0" Background="#FFBBD6DE"/>
-        <Border BorderThickness="1" BorderBrush="Black" Margin="55,0,368,225" Background="#FFBCD4DA"/>
-        <Border BorderThickness="1" BorderBrush="Black" Margin="432,0,0,225" Background="#FFBEEEFB"/>
-        <Border BorderThickness="1" BorderBrush="Black" Margin="432,225,0,0" Background="Black"/>
+        <Border Margin="0,0,1772,0" Background="#FFE4F9FF"/>
+        <Border Margin="148,508,899,0" Background="#FF86A9B4"/>
+        <Border Margin="148,0,899,459" Background="#FFBCD4DA"/>
+        <Border Margin="1021,0,0,459" Background="#FFBEEEFB"/>
+        <Border Margin="1021,508,0,0" Background="Black"/>
+        <TextBox HorizontalAlignment="Left" Margin="44,10,0,0" Text="Driver" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Height="31" SelectionTextBrush="{x:Null}" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" FontStyle="Normal">
+            <TextBox.TextDecorations>
+                <TextDecoration/>
+            </TextBox.TextDecorations>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="172,10,0,0" Text="Unassigned Orders" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="31" SelectionTextBrush="{x:Null}" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" FontStyle="Normal">
+            <TextBox.TextDecorations>
+                <TextDecoration/>
+            </TextBox.TextDecorations>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="1046,10,0,0" Text="Assigned Orders" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Height="31" SelectionTextBrush="{x:Null}" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" FontStyle="Normal">
+            <TextBox.TextDecorations>
+                <TextDecoration/>
+            </TextBox.TextDecorations>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="1442,721,0,0" Text="MAP" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" SelectionTextBrush="{x:Null}" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="24" FontWeight="Bold" FontStyle="Normal" Foreground="White">
+            <TextBox.TextDecorations>
+                <TextDecoration/>
+            </TextBox.TextDecorations>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="172,526,0,0" Text="Cart" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" SelectionTextBrush="{x:Null}" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" FontStyle="Normal">
+            <TextBox.TextDecorations>
+                <TextDecoration/>
+            </TextBox.TextDecorations>
+        </TextBox>
     </Grid>
 </Page>

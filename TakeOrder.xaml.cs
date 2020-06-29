@@ -22,5 +22,40 @@ namespace WindyCityPOS
         {
             InitializeComponent();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //payment
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            //customer editor
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            //for here
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            //pick up
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            //delivery
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
