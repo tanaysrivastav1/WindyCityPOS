@@ -13,30 +13,43 @@
         <Border Margin="148,0,899,459" Background="#FFBCD4DA"/>
         <Border Margin="1021,0,0,459" Background="#FFBEEEFB"/>
         <Border Margin="1021,508,0,0" Background="Black"/>
-        <TextBox HorizontalAlignment="Left" Margin="44,10,0,0" Text="Driver" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Height="31" SelectionTextBrush="{x:Null}" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" FontStyle="Normal">
-            <TextBox.TextDecorations>
+        <Button Content="Driver #1" HorizontalAlignment="Left" Margin="28,71,0,0" VerticalAlignment="Top" Height="90" Width="90"/>
+        <Button Content="Driver #2" HorizontalAlignment="Left" Margin="29,188,0,0" VerticalAlignment="Top" Height="90" Width="90"/>
+        <Button Content="Driver #3" HorizontalAlignment="Left" Margin="29,309,0,0" VerticalAlignment="Top" Height="90" Width="90"/>
+        <TextBlock HorizontalAlignment="Left" Margin="48,11,0,0" Text="Driver" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
+            <TextBlock.TextDecorations>
                 <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="172,10,0,0" Text="Unassigned Orders" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="31" SelectionTextBrush="{x:Null}" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" FontStyle="Normal">
-            <TextBox.TextDecorations>
+            </TextBlock.TextDecorations>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="168,11,0,0" Text="Unassigned Orders" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
+            <TextBlock.TextDecorations>
                 <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="1046,10,0,0" Text="Assigned Orders" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Height="31" SelectionTextBrush="{x:Null}" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" FontStyle="Normal">
-            <TextBox.TextDecorations>
+            </TextBlock.TextDecorations>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="1046,19,0,0" Text="Assigned Orders" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
+            <TextBlock.TextDecorations>
                 <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="1442,721,0,0" Text="MAP" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" SelectionTextBrush="{x:Null}" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="24" FontWeight="Bold" FontStyle="Normal" Foreground="White">
-            <TextBox.TextDecorations>
+            </TextBlock.TextDecorations>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="329,524,0,0" Text="Item" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
+            <TextBlock.TextDecorations>
                 <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="172,526,0,0" Text="Cart" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" SelectionTextBrush="{x:Null}" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Gadugi" FontSize="14" FontWeight="Bold" FontStyle="Normal">
-            <TextBox.TextDecorations>
+            </TextBlock.TextDecorations>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="168,524,0,0" Text="Quantity" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
+            <TextBlock.TextDecorations>
                 <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
+            </TextBlock.TextDecorations>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="889,524,0,0" Text="Price" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontSize="14" FontWeight="Bold">
+            <TextBlock.TextDecorations>
+                <TextDecoration/>
+            </TextBlock.TextDecorations>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="1422,723,0,0" Text="MAP" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFE6F4F7" FontSize="48" FontWeight="Bold" FontFamily="Bahnschrift Light">
+            <TextBlock.TextDecorations>
+                <TextDecoration/>
+            </TextBlock.TextDecorations>
+        </TextBlock>
     </Grid>
 </Page>

@@ -99,6 +99,6 @@
         <Button Content="Clear" HorizontalAlignment="Left" Margin="1203,19,0,0" VerticalAlignment="Top" Height="70" Width="80" Click="Button_Click_15" Style="{DynamicResource RoundedButtonStyle}" FontSize="16" FontFamily="Gadugi"/>
 
         <Frame x:Name="Main" Margin="0,113,0,1" NavigationUIVisibility="Hidden"/>
-        <TextBox HorizontalAlignment="Left" Margin="830,19,0,0" Text="WindyPOSbeta" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="49" Background="{x:Null}" Foreground="White" FontSize="26" FontFamily="MV Boli" FontWeight="Bold" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="830,10,0,0" Text="WindyPOSbeta" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="MV Boli" FontSize="26" Foreground="White" FontWeight="Bold"/>
     </Grid>
 </Window>
