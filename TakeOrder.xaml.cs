@@ -28,9 +28,21 @@ namespace WindyCityPOS
 
         }
 
+        bool payButtonFlag = true;
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //payment
+            if (payButtonFlag)
+            {
+                payButtonFlag = false;
+                Side.Content = new Payment();
+            }
+            else
+            {
+                payButtonFlag = true;
+                Side.Content = null;
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -54,6 +66,11 @@ namespace WindyCityPOS
         }
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Frame_Navigated(object sender, NavigationEventArgs e)
         {
 
         }

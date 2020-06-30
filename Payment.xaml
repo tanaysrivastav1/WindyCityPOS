@@ -1,0 +1,108 @@
+﻿<Page x:Class="WindyCityPOS.Payment"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WindyCityPOS"
+      mc:Ignorable="d"
+      Title="Payment" Width="1332" Height="967">
+    <Page.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" SnapsToDevicePixels="true" StrokeThickness="1" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#EAB01E"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#EAB01E"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#F1CA68"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#F1CA68"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Width="1332" Height="967">
+        <Border BorderThickness="1" BorderBrush="Black" Background="#FFB2D5FF"/>
+        <Button Style="{DynamicResource RoundedButtonStyle}" Content="7" HorizontalAlignment="Left" Margin="110,464,0,0" VerticalAlignment="Top" Height="95" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="110,252,0,0" Text="Amount Due:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontSize="16" FontWeight="Bold">
+            <TextBlock.TextDecorations>
+                <TextDecoration/>
+            </TextBlock.TextDecorations>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="110,318,0,0" Text="Cash Tendered:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.46,1.065" FontFamily="Gadugi" FontSize="16" FontWeight="Bold">
+            <TextBlock.TextDecorations>
+                <TextDecoration/>
+            </TextBlock.TextDecorations>
+        </TextBlock>
+        <Button Content="8" HorizontalAlignment="Left" Margin="270,464,0,0" VerticalAlignment="Top" Height="95" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="9" HorizontalAlignment="Left" Margin="428,464,0,0" VerticalAlignment="Top" Height="95" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="4" HorizontalAlignment="Left" Margin="110,582,0,0" VerticalAlignment="Top" Height="96" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="5" HorizontalAlignment="Left" Margin="270,582,0,0" VerticalAlignment="Top" Height="96" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="6" HorizontalAlignment="Left" Margin="428,582,0,0" VerticalAlignment="Top" Height="96" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="1" HorizontalAlignment="Left" Margin="110,700,0,0" VerticalAlignment="Top" Height="96" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="2" HorizontalAlignment="Left" Margin="270,700,0,0" VerticalAlignment="Top" Height="96" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="3" HorizontalAlignment="Left" Margin="428,700,0,0" VerticalAlignment="Top" Height="96" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="110,818,0,0" VerticalAlignment="Top" Height="96" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="0" HorizontalAlignment="Left" Margin="270,818,0,0" VerticalAlignment="Top" Height="96" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="Enter" HorizontalAlignment="Left" Margin="428,818,0,0" VerticalAlignment="Top" Height="96" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="110,384,0,0" Text="Return:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontSize="16" FontWeight="Bold">
+            <TextBlock.TextDecorations>
+                <TextDecoration/>
+            </TextBlock.TextDecorations>
+        </TextBlock>
+        <Button Content="Card" HorizontalAlignment="Left" Margin="730,464,0,0" VerticalAlignment="Top" Height="95" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="Split Payment" HorizontalAlignment="Left" Margin="902,464,0,0" VerticalAlignment="Top" Width="136" Height="95" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="Chow" HorizontalAlignment="Left" Margin="730,700,0,0" VerticalAlignment="Top" Height="95" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="Grubhub" HorizontalAlignment="Left" Margin="902,701,0,0" VerticalAlignment="Top" Height="95" Width="136" Click="Button_Click" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Content="UberEats" HorizontalAlignment="Left" Margin="1068,701,0,0" VerticalAlignment="Top" Height="95" Width="136" FontFamily="Gadugi" FontSize="16" FontWeight="Bold" Style="{DynamicResource RoundedButtonStyle}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="110,102,0,0" Text="Payment Menu" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontSize="30" FontWeight="Bold" FontStyle="Normal">
+            <TextBlock.TextDecorations>
+                <TextDecoration/>
+            </TextBlock.TextDecorations>
+        </TextBlock>
+
+    </Grid>
+</Page>

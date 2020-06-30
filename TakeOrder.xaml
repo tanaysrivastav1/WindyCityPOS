@@ -70,7 +70,9 @@
         </Grid.ColumnDefinitions>
         <Border BorderThickness="1" Margin="0,257,1330,0" Background="#FFE4F9FF"/>
         <Border BorderThickness="1" Margin="590,0,1152,0" Background="#FF0FABBC"/>
-        <Border BorderThickness="1" Margin="768,0,394,0" Background="#FFE4F9FF"/>
+        <Border BorderThickness="1" Margin="768,0,394,0" Background="#FFE4F9FF">
+
+        </Border>
         <Border BorderThickness="1" Margin="1526,0,0,0" Background="#FFD4F3EF"/>
         <Border BorderThickness="1" Margin="0,0,1330,710" Background="#FFABF0E9"/>
         <Button Content="Payment" HorizontalAlignment="Left" Margin="63,975,0,0" VerticalAlignment="Top" Height="80" Width="431"/>
@@ -144,11 +146,12 @@
             <TextBlock.TextDecorations>
                 <TextDecoration/>
             </TextBlock.TextDecorations><Run Text="Entrees"/><LineBreak/><Run/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="1723,13,0,0" Text="Qualifiers" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
+        <TextBlock HorizontalAlignment="Left" Margin="1711,13,0,0" Text="Qualifiers" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
             <TextBlock.TextDecorations>
                 <TextDecoration/>
             </TextBlock.TextDecorations>
         </TextBlock>
 
+        <Frame x:Name="Side" Margin="592,0,0,-2" NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Width="1328"/>
     </Grid>
 </Page>
