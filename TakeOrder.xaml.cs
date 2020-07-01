@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WindyCityPOS.General;
 
 namespace WindyCityPOS
 {
@@ -21,6 +24,64 @@ namespace WindyCityPOS
         public TakeOrder()
         {
             InitializeComponent();
+            LoadAllSizesinDataGridView();
+
+        }
+
+        //Create property boolean to update the form
+        public bool IsUpdate { get; set; }
+
+        //Create a list using integer type
+        private List<int> SizesCart = new List<int>();
+
+        private void PizzaForm_Load(object sender, EventArgs e)
+        {
+            if (!this.IsUpdate)
+            {
+                //Not updated
+
+            }
+            LoadAllSizesinDataGridView();
+            //LoadDataIntoComboBoxes();
+
+        }
+
+        //LoadAllSizes loads data into sizesdatagridview
+        private void LoadAllSizesinDataGridView()
+        {
+                SizesDataGridView.ItemsSource = GetSizesData().DefaultView;
+            
+           
+            //remove visibility of ID numbers
+            //SizesDataGridView.Columns[0].Visible = false;
+
+        }
+
+        //GetSizesData returns the datatable from SQL
+        private DataTable GetSizesData()
+        {
+            //NOTE: compiler will through nullpointer error if datatable is null, so create an object
+
+            DataTable dtsizes = new DataTable();
+
+            //get and store the datatable through sql connection -> applicationsetting.cs
+            using (SqlConnection con = new SqlConnection(ApplicationSetting.ConnectionString()))
+            { 
+            //runs sql command usp load pizzas (see .txt file)
+            using (SqlCommand cmd = new SqlCommand("usp_Pizzas_LoadAllPizzas", con))
+            {
+            
+                        //load procedure and given params
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@main_identifier", 11);
+
+                        con.Open();
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                        dtsizes.Load(sdr);
+                //read data then load into dtsizes datatable
+            }
+        }
+            return dtsizes;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -71,6 +132,11 @@ namespace WindyCityPOS
         }
 
         private void Frame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
+
+        private void SizesDataGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

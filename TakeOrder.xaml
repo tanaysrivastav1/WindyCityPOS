@@ -153,6 +153,7 @@
                 </TextBlock>
             </StackPanel>
             <StackPanel Margin="1518,0,0,0" Background="#FFA9DCE8"/>
+            <DataGrid x:Name="SizesDataGridView" Margin="565,48,1225,452" SelectionChanged="SizesDataGridView_SelectionChanged"/>
         </Grid>
     </Grid>
 </Page>
