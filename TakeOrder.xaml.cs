@@ -36,12 +36,12 @@ namespace WindyCityPOS
             if (payButtonFlag)
             {
                 payButtonFlag = false;
-                Side.Content = new Payment();
+                //Side.Content = new Payment();
             }
             else
             {
                 payButtonFlag = true;
-                Side.Content = null;
+                //Side.Content = null;
             }
         }
 

@@ -5,7 +5,9 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WindyCityPOS"
       mc:Ignorable="d"
-      Title="TakeOrder" Height="967" Width="1920" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+      Title="TakeOrder" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+
+
     <Page.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -68,90 +70,89 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Border BorderThickness="1" Margin="0,257,1330,0" Background="#FFE4F9FF"/>
-        <Border BorderThickness="1" Margin="590,0,1152,0" Background="#FF0FABBC"/>
-        <Border BorderThickness="1" Margin="768,0,394,0" Background="#FFE4F9FF">
-
-        </Border>
-        <Border BorderThickness="1" Margin="1526,0,0,0" Background="#FFD4F3EF"/>
-        <Border BorderThickness="1" Margin="0,0,1330,710" Background="#FFABF0E9"/>
-        <Button Content="Payment" HorizontalAlignment="Left" Margin="63,975,0,0" VerticalAlignment="Top" Height="80" Width="431"/>
-        <Button Content="Pick-Up" HorizontalAlignment="Left" Margin="329,20,0,0" VerticalAlignment="Top" Height="65" Width="110" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click_3"/>
-        <Button Content="Delivery" HorizontalAlignment="Left" Margin="460,20,0,0" VerticalAlignment="Top" Height="65" Width="110" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click_4"/>
-        <Button Content="Customer Editor" HorizontalAlignment="Left" Margin="82,202,0,0" VerticalAlignment="Top" Height="40" Width="170" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click_1"/>
-        <Button Style="{DynamicResource RoundedButtonStyle}" Content="For-Here" HorizontalAlignment="Left" Margin="197,20,0,0" VerticalAlignment="Top" Height="65" Width="110" Click="Button_Click_2"/>
-        <Button Content="Payment" HorizontalAlignment="Left" Margin="55,880,0,0" VerticalAlignment="Top" Height="70" Width="480" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click" BorderBrush="{x:Null}" Foreground="White" FontFamily="Mongolian Baiti" FontSize="36" FontWeight="Normal" FontStyle="Italic">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform Angle="75" CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FF53E06C"/>
-                    <GradientStop Color="#FF0FCF32" Offset="1"/>
-                    <GradientStop Color="#FF1D9B33" Offset="0.516"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <TextBlock HorizontalAlignment="Left" Margin="27,27,0,0" Text="Order #" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
-            <TextBlock.TextDecorations>
-                <TextDecoration/>
-            </TextBlock.TextDecorations>
-        </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="27,57,0,0" Text="Order Type:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
-            <TextBlock.TextDecorations>
-                <TextDecoration/>
-            </TextBlock.TextDecorations>
-        </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="27,113,0,0" Text="Phone:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
-            <TextBlock.TextDecorations>
-                <TextDecoration/>
-            </TextBlock.TextDecorations>
-        </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="27,142,0,0" Text="Name:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
-            <TextBlock.TextDecorations>
-                <TextDecoration/>
-            </TextBlock.TextDecorations>
-        </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="27,171,0,0" Text="Address:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
-            <TextBlock.TextDecorations>
-                <TextDecoration/>
-            </TextBlock.TextDecorations>
-        </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="16,276,0,0" Text="Quantity" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
-            <TextBlock.TextDecorations>
-                <TextDecoration/>
-            </TextBlock.TextDecorations>
-        </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="120,276,0,0" Text="Item" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
-            <TextBlock.TextDecorations>
-                <TextDecoration/>
-            </TextBlock.TextDecorations>
-        </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="468,276,0,0" Text="Price" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
-            <TextBlock.TextDecorations>
-                <TextDecoration/>
-            </TextBlock.TextDecorations>
-        </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="665,13,0,0" Text="Main" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
-            <TextBlock.TextDecorations>
-                <TextDecoration/>
-            </TextBlock.TextDecorations>
-        </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="1108,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
+        <TextBlock HorizontalAlignment="Left" Margin="1086,-68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
             <TextBlock.TextDecorations>
                 <TextDecoration/>
             </TextBlock.TextDecorations><Run Text="Entrees"/><LineBreak/><Run/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="1711,13,0,0" Text="Qualifiers" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
+        <TextBlock HorizontalAlignment="Left" Margin="1720,-59,0,0" Text="Qualifiers" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
             <TextBlock.TextDecorations>
                 <TextDecoration/>
             </TextBlock.TextDecorations>
         </TextBlock>
-
-        <Frame x:Name="Side" Margin="592,0,0,-2" NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Width="1328"/>
+        <Grid>
+            <Border BorderThickness="1" Margin="0,0,1330,610" Background="#FFABF0E9">
+                <Button Content="Customer Editor" Margin="391,174,9,0" VerticalAlignment="Top" Height="40" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click_1"/>
+            </Border>
+            <Border BorderThickness="1" Margin="0,234,1330,0" Background="#FFE4F9FF">
+                <Button Content="Payment" HorizontalAlignment="Left" Margin="35,551,0,9" Width="516" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click" BorderBrush="{x:Null}" Foreground="White" FontFamily="Mongolian Baiti" FontSize="36" FontWeight="Normal" FontStyle="Italic">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="75" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FF53E06C"/>
+                            <GradientStop Color="#FF0FCF32" Offset="1"/>
+                            <GradientStop Color="#FF1D9B33" Offset="0.516"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </Border>
+            <TextBlock HorizontalAlignment="Left" Margin="21,31,0,0" Text="Order #" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
+                <TextBlock.TextDecorations>
+                    <TextDecoration/>
+                </TextBlock.TextDecorations>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="21,61,0,0" Text="Order Type:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
+                <TextBlock.TextDecorations>
+                    <TextDecoration/>
+                </TextBlock.TextDecorations>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="21,117,0,0" Text="Phone:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
+                <TextBlock.TextDecorations>
+                    <TextDecoration/>
+                </TextBlock.TextDecorations>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="21,146,0,0" Text="Name:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
+                <TextBlock.TextDecorations>
+                    <TextDecoration/>
+                </TextBlock.TextDecorations>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="21,175,0,0" Text="Address:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
+                <TextBlock.TextDecorations>
+                    <TextDecoration/>
+                </TextBlock.TextDecorations>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="36,250,0,0" Text="Quantity" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
+                <TextBlock.TextDecorations>
+                    <TextDecoration/>
+                </TextBlock.TextDecorations>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="140,250,0,0" Text="Item" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
+                <TextBlock.TextDecorations>
+                    <TextDecoration/>
+                </TextBlock.TextDecorations>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="488,250,0,0" Text="Price" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
+                <TextBlock.TextDecorations>
+                    <TextDecoration/>
+                </TextBlock.TextDecorations>
+            </TextBlock>
+            <Button Content="Pick-Up" HorizontalAlignment="Left" Margin="315,15,0,0" VerticalAlignment="Top" Height="65" Width="110" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click_3"/>
+            <Button Content="Delivery" HorizontalAlignment="Left" Margin="430,15,0,0" VerticalAlignment="Top" Height="65" Width="110" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click_4"/>
+            <Button Style="{DynamicResource RoundedButtonStyle}" Content="For-Here" HorizontalAlignment="Left" Margin="197,15,0,0" VerticalAlignment="Top" Height="65" Width="110" Click="Button_Click_2"/>
+            <StackPanel Margin="553,0,1213,0" Background="#FF90A8CB">
+                <TextBlock Text="Main" TextWrapping="Wrap" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
+                    <TextBlock.TextDecorations>
+                        <TextDecoration/>
+                    </TextBlock.TextDecorations>
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Margin="1518,0,0,0" Background="#FFA9DCE8"/>
+        </Grid>
     </Grid>
 </Page>

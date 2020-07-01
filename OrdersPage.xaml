@@ -9,7 +9,11 @@
       Title="RecordsWindow">
 
     <Grid>
-        <Border BorderThickness="1" BorderBrush="Black" Margin="0,0,737,0"/>
-
+        <StackPanel Margin="0,0,742,0" Background="#FF96B8CB">
+            <Button Content="For-Here" Margin="0,20,0,0" Height="50" Width="50"/>
+            <Button Content="Pick-Up" Margin="0,20,0,0" Height="50" Width="50"/>
+            <Button Content="Delivery" Margin="0,20,0,0" Height="50" Width="50"/>
+            <Button Content="Closed" Margin="0,20,0,0" Height="50" Width="50"/>
+        </StackPanel>
     </Grid>
 </Page>
