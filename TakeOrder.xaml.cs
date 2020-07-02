@@ -24,7 +24,33 @@ namespace WindyCityPOS
         public TakeOrder()
         {
             InitializeComponent();
-            LoadAllSizesinDataGridView();
+            //LoadAllSizesinDataGridView();
+
+            SqlConnection con = new SqlConnection("Data Source=windycityserver.database.windows.net;Initial Catalog=food;Persist Security Info=True;User ID=webappAdmin;Password=appAdmin2001");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Select main_identifier, main_name from main_cata", con);
+            SqlDataReader data = cmd.ExecuteReader();
+            //LoadButton
+            for (int i = 1; i < 12; i++)
+            {
+
+                while (data.Read())
+                {
+                    Button b = new Button();
+                    b.Name = data.GetValue(i).ToString();
+                    b.Content = data.GetValue(i).ToString();
+                    //b.HorizontalAlignment = HorizontalAlignment.Left;
+                    b.Width = 125;
+                    b.Height = 50;
+                    //b.Margin = (20, 0, 0, 0);
+                    b.FontSize = 22;
+                    //add buttons to the stack panel
+                    sp.Children.Add(b);
+
+
+                }
+            }
+            con.Close();
 
         }
 
@@ -49,7 +75,7 @@ namespace WindyCityPOS
         //LoadAllSizes loads data into sizesdatagridview
         private void LoadAllSizesinDataGridView()
         {
-                SizesDataGridView.ItemsSource = GetSizesData().DefaultView;
+                //SizesDataGridView.ItemsSource = GetSizesData().DefaultView;
             
            
             //remove visibility of ID numbers
