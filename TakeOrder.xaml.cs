@@ -140,5 +140,49 @@ namespace WindyCityPOS
         {
 
         }
+
+        private void OrderNumberTxtBox_TextChanged_2(object sender, TextChangedEventArgs e)
+        {
+            //Order Number Textbox
+            SqlConnection con = new SqlConnection("Data Source=windycityserver.database.windows.net;Initial Catalog=customers;Persist Security Info=True;User ID=webappAdmin;Password=appAdmin2001");
+            con.Open();
+            if (OrderNumberTxtBox.Text != "")
+            {
+
+                SqlCommand cmd = new SqlCommand("Select OrderType, Phone, Name, Address from Orders where ID = @ID", con);
+                cmd.Parameters.AddWithValue("@ID", int.Parse(OrderNumberTxtBox.Text));
+                SqlDataReader data = cmd.ExecuteReader();
+                while (data.Read())
+                {
+                    OrderTypeTxtBox.Text = data.GetValue(0).ToString();
+                    PhoneNumberTxtBox.Text = data.GetValue(1).ToString();
+                    NameTxtBox.Text = data.GetValue(2).ToString();
+                    AddressTxtBox.Text = data.GetValue(3).ToString();
+
+                }
+                con.Close();
+            }
+
+        }
+
+        private void OrderTypeTxtBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            //Order Type TextBox
+        }
+
+        private void PhoneNumberTxtBox_TextChanged_3(object sender, TextChangedEventArgs e)
+        {
+            //Phone Number TextBox
+        }
+
+        private void NameTxtBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            //Name TextBox
+        }
+
+        private void AddressTxtBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            //Address Ttext box
+        }
     }
 }

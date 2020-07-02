@@ -81,7 +81,7 @@
         </TextBlock>
         <Grid>
             <Border BorderThickness="1" Margin="0,0,1330,610" Background="#FFABF0E9">
-                <Button Content="Customer Editor" Margin="391,174,9,0" VerticalAlignment="Top" Height="40" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click_1"/>
+                <TextBox x:Name="OrderNumberTxtBox" TextWrapping="Wrap" Margin="78,31,382,192" TextChanged="OrderNumberTxtBox_TextChanged_2" RenderTransformOrigin="0.626,0.248"/>
             </Border>
             <Border BorderThickness="1" Margin="0,234,1330,0" Background="#FFE4F9FF">
                 <Button Content="Payment" HorizontalAlignment="Left" Margin="35,551,0,9" Width="516" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click" BorderBrush="{x:Null}" Foreground="White" FontFamily="Mongolian Baiti" FontSize="36" FontWeight="Normal" FontStyle="Italic">
@@ -154,6 +154,10 @@
             </StackPanel>
             <StackPanel Margin="1518,0,0,0" Background="#FFA9DCE8"/>
             <DataGrid x:Name="SizesDataGridView" Margin="565,48,1225,452" SelectionChanged="SizesDataGridView_SelectionChanged"/>
+            <TextBox x:Name="OrderTypeTxtBox" HorizontalAlignment="Left" Margin="109,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" RenderTransformOrigin="1.441,0.223" TextChanged="OrderTypeTxtBox_TextChanged"/>
+            <TextBox x:Name="PhoneNumberTxtBox" HorizontalAlignment="Left" Margin="80,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="PhoneNumberTxtBox_TextChanged_3" RenderTransformOrigin="0.5,0.5"/>
+            <TextBox x:Name="NameTxtBox" HorizontalAlignment="Left" Margin="80,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="NameTxtBox_TextChanged"/>
+            <TextBox x:Name="AddressTxtBox" HorizontalAlignment="Left" Margin="82,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="AddressTxtBox_TextChanged"/>
         </Grid>
     </Grid>
 </Page>
