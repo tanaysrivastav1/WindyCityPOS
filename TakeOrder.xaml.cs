@@ -41,10 +41,12 @@ namespace WindyCityPOS
                     b.Name = data.GetValue(i).ToString();
                     b.Content = data.GetValue(i).ToString();
                     //b.HorizontalAlignment = HorizontalAlignment.Left;
-                    b.Width = 125;
+                    b.Width = 75;
                     b.Height = 50;
-                    b.Margin = new Thickness(0, 20, 0, 0);
-                    b.FontSize = 22;
+                    b.Margin = new Thickness(0, 0, 0, 20);
+                    b.FontFamily = new FontFamily("Gadugi"); ;
+                    b.FontSize = 18;
+                    b.Style = (Style)FindResource("RoundedButtonStyle");
                     b.Click += new RoutedEventHandler(button_click);
                     //add buttons to the stack panel
                     sp.Children.Add(b);
@@ -63,7 +65,7 @@ namespace WindyCityPOS
             //if user pressed subs
             if (btn.Name == "Subs")
             { 
-                Debug.WriteLine("button pressed bitch");
+                Debug.WriteLine("button pressed");
                 SqlConnection con = new SqlConnection("Data Source=windycityserver.database.windows.net;Initial Catalog=food;Persist Security Info=True;User ID=webappAdmin;Password=appAdmin2001");
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Select ID, sub_name, price, quantity from sub_cat", con);
@@ -79,12 +81,14 @@ namespace WindyCityPOS
                         //b.Name = data.GetValue(1).ToString();
                         b.Content = data.GetValue(1).ToString();
                         //b.HorizontalAlignment = HorizontalAlignment.Left;
-                        b.Width = 125;
-                        b.Height = 50;
-                        b.Margin = new Thickness(0, 20, 0, 0);
-                        b.FontSize = 22;
+                        b.Width = 100;
+                        b.Height = 100;
+                        b.Margin = new Thickness(20, 0, 0, 20);
+                        b.FontSize = 16;
+                        b.FontFamily = new FontFamily("Gadugi"); ;
+                        b.Style = (Style)FindResource("RoundedButtonStyle");
                         //add buttons to the stack panel
-                        subs.Children.Add(b);
+                        main.Children.Add(b);
                     }
               //  }
                 con.Close();
