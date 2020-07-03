@@ -80,11 +80,8 @@
             </TextBlock.TextDecorations>
         </TextBlock>
         <Grid>
-            <Border BorderThickness="1" Margin="0,0,1330,610" Background="#FFABF0E9">
-                <TextBox x:Name="OrderNumberTxtBox" TextWrapping="Wrap" Margin="78,31,382,192" TextChanged="OrderNumberTxtBox_TextChanged_2" RenderTransformOrigin="0.626,0.248"/>
-            </Border>
-            <Border BorderThickness="1" Margin="0,234,1330,0" Background="#FFE4F9FF">
-                <Button Content="Payment" HorizontalAlignment="Left" Margin="35,551,0,9" Width="516" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click" BorderBrush="{x:Null}" Foreground="White" FontFamily="Mongolian Baiti" FontSize="36" FontWeight="Normal" FontStyle="Italic">
+            <Border BorderThickness="1" Margin="0,220,1230,0" Background="#FFE4F9FF">
+                <Button Content="Payment" Margin="17,610,17,9" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click" BorderBrush="{x:Null}" Foreground="White" FontFamily="Mongolian Baiti" FontSize="36" FontWeight="Normal" FontStyle="Italic">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <LinearGradientBrush.RelativeTransform>
@@ -102,31 +99,48 @@
                     </Button.Background>
                 </Button>
             </Border>
-            <TextBlock HorizontalAlignment="Left" Margin="21,31,0,0" Text="Order #" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
-                <TextBlock.TextDecorations>
-                    <TextDecoration/>
-                </TextBlock.TextDecorations>
-            </TextBlock>
-            <TextBlock HorizontalAlignment="Left" Margin="21,61,0,0" Text="Order Type:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
-                <TextBlock.TextDecorations>
-                    <TextDecoration/>
-                </TextBlock.TextDecorations>
-            </TextBlock>
-            <TextBlock HorizontalAlignment="Left" Margin="21,117,0,0" Text="Phone:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
-                <TextBlock.TextDecorations>
-                    <TextDecoration/>
-                </TextBlock.TextDecorations>
-            </TextBlock>
-            <TextBlock HorizontalAlignment="Left" Margin="21,146,0,0" Text="Name:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
-                <TextBlock.TextDecorations>
-                    <TextDecoration/>
-                </TextBlock.TextDecorations>
-            </TextBlock>
-            <TextBlock HorizontalAlignment="Left" Margin="21,175,0,0" Text="Address:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
-                <TextBlock.TextDecorations>
-                    <TextDecoration/>
-                </TextBlock.TextDecorations>
-            </TextBlock>
+            <StackPanel Margin="0,0,1230,688" Background="#FFA2A2A2">
+                <WrapPanel Height="40" Margin="0,20,0,0">
+                    <TextBlock HorizontalAlignment="Left" Text="Order #" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14" Margin="20,0,0,0">
+                        <TextBlock.TextDecorations>
+                            <TextDecoration/>
+                        </TextBlock.TextDecorations>
+                    </TextBlock>
+                    <TextBox x:Name="OrderNumberTxtBox" TextWrapping="Wrap" TextChanged="OrderNumberTxtBox_TextChanged_2" RenderTransformOrigin="0.626,0.248" Height="30" Width="30" Margin="20,0,0,0" FontFamily="Gadugi" FontSize="20" FontWeight="Bold" FontStyle="Normal" TextAlignment="Center"/>
+                </WrapPanel>
+                <WrapPanel Height="40">
+                    <TextBlock HorizontalAlignment="Left" Text="Order Type:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14" Margin="20,0,0,0">
+                        <TextBlock.TextDecorations>
+                            <TextDecoration/>
+                        </TextBlock.TextDecorations>
+                    </TextBlock>
+                    <TextBox x:Name="OrderTypeTxtBox" TextWrapping="Wrap" RenderTransformOrigin="1.441,0.223" TextChanged="OrderTypeTxtBox_TextChanged" Height="20" Width="140" Margin="25,0,0,0" FontFamily="Gadugi" FontSize="14" Background="{x:Null}" BorderBrush="{x:Null}" IsReadOnly="True" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontWeight="Bold"/>
+                </WrapPanel>
+                <WrapPanel Height="40">
+                    <TextBlock HorizontalAlignment="Left" Text="Phone:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14" Margin="48,0,0,0">
+                        <TextBlock.TextDecorations>
+                            <TextDecoration/>
+                        </TextBlock.TextDecorations>
+                    </TextBlock>
+                    <TextBox x:Name="PhoneNumberTxtBox" TextWrapping="Wrap" TextChanged="PhoneNumberTxtBox_TextChanged_3" RenderTransformOrigin="0.5,0.5" Text=" " Height="18" Width="120" Margin="31,0,0,0" FontFamily="Gadugi" FontSize="14" Background="{x:Null}" BorderBrush="{x:Null}" IsReadOnly="True" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontWeight="Bold"/>
+                </WrapPanel>
+                <WrapPanel Height="40">
+                    <TextBlock HorizontalAlignment="Left" Text="Name:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14" Margin="48,0,0,0">
+                        <TextBlock.TextDecorations>
+                            <TextDecoration/>
+                        </TextBlock.TextDecorations>
+                    </TextBlock>
+                    <TextBox x:Name="NameTxtBox" TextWrapping="Wrap" TextChanged="NameTxtBox_TextChanged" Height="18" Width="120" Margin="34,0,0,0" FontFamily="Gadugi" FontSize="14" Background="{x:Null}" BorderBrush="{x:Null}" IsReadOnly="True" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontWeight="Bold"/>
+                </WrapPanel>
+                <WrapPanel Height="40">
+                    <TextBlock HorizontalAlignment="Left" Text="Address:" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Gadugi" FontWeight="Bold" FontSize="14" Margin="48,0,0,0">
+                        <TextBlock.TextDecorations>
+                            <TextDecoration/>
+                        </TextBlock.TextDecorations>
+                    </TextBlock>
+                    <TextBox x:Name="AddressTxtBox" TextWrapping="Wrap" TextChanged="AddressTxtBox_TextChanged" Height="18" Width="140" FontFamily="Gadugi" FontSize="14" Margin="20,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" IsReadOnly="True" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" FontWeight="Bold"/>
+                </WrapPanel>
+            </StackPanel>
             <TextBlock HorizontalAlignment="Left" Margin="36,250,0,0" Text="Quantity" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
                 <TextBlock.TextDecorations>
                     <TextDecoration/>
@@ -145,7 +159,7 @@
             <Button Content="Pick-Up" HorizontalAlignment="Left" Margin="315,15,0,0" VerticalAlignment="Top" Height="65" Width="110" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click_3"/>
             <Button Content="Delivery" HorizontalAlignment="Left" Margin="430,15,0,0" VerticalAlignment="Top" Height="65" Width="110" Style="{DynamicResource RoundedButtonStyle}" Click="Button_Click_4"/>
             <Button Style="{DynamicResource RoundedButtonStyle}" Content="For-Here" HorizontalAlignment="Left" Margin="197,15,0,0" VerticalAlignment="Top" Height="65" Width="110" Click="Button_Click_2"/>
-            <StackPanel Name ="sp" Margin="553,0,1213,0" Background="#FF90A8CB">
+            <StackPanel Name ="sp" Margin="553,0,1132,0" Background="#FF90A8CB">
                 <TextBlock Text="Main" TextWrapping="Wrap" FontFamily="Gadugi" FontWeight="Bold" FontSize="14">
                     <TextBlock.TextDecorations>
                         <TextDecoration/>
@@ -153,11 +167,7 @@
                 </TextBlock>
             </StackPanel>
             <StackPanel Name="subs" Margin="1518,0,0,0" Background="#FFA9DCE8"/>
-            <TextBox x:Name="OrderTypeTxtBox" HorizontalAlignment="Left" Margin="109,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" RenderTransformOrigin="1.441,0.223" TextChanged="OrderTypeTxtBox_TextChanged"/>
-            <TextBox x:Name="PhoneNumberTxtBox" HorizontalAlignment="Left" Margin="80,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="PhoneNumberTxtBox_TextChanged_3" RenderTransformOrigin="0.5,0.5"/>
-            <TextBox x:Name="NameTxtBox" HorizontalAlignment="Left" Margin="80,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="NameTxtBox_TextChanged"/>
-            <TextBox x:Name="AddressTxtBox" HorizontalAlignment="Left" Margin="82,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="AddressTxtBox_TextChanged"/>
         </Grid>
-        
+
     </Grid>
 </Page>
