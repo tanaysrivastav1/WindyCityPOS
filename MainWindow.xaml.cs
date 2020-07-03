@@ -106,5 +106,10 @@ namespace WindyCityPOS
             
            
         }
+
+        private void Main_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }

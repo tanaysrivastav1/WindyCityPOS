@@ -75,13 +75,16 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid Background="#FF4D5D66">
+    <Grid Background="#FF4D5D66" Height="970">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+
         </Grid.ColumnDefinitions>
 
-        <Frame x:Name="Main" Margin="0,101,0,1" NavigationUIVisibility="Hidden"/>
-        <WrapPanel Margin="0,0,787,967">
+        <WrapPanel Grid.Row="0" Margin="0,0,787,0">
 
             <Button Content="New Order" HorizontalAlignment="Left" VerticalAlignment="Top" Height="70" Width="140" Click="Button_Click_2" Style="{DynamicResource RoundedButtonStyle}" FontSize="16" FontFamily="Gadugi" Padding="1,1,1,1" Margin="20,20,10,10"/>
             <Button Content="Drivers" HorizontalAlignment="Left" VerticalAlignment="Center" Height="70" Width="140" Click="Button_Click_14" Style="{DynamicResource RoundedButtonStyle}" FontSize="16" FontFamily="Gadugi" Margin="10,20,10,10"/>
@@ -93,18 +96,6 @@
 
 
         </WrapPanel>
-        <Button x:Name="LoadButton" Content="Load Menu Items" HorizontalAlignment="Left" Margin="1184,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="92" Width="210" FontSize="20" Click="LoadButton_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.378"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Grid>
-            <StackPanel Name="sp" Grid.Row="2" Orientation="Horizontal" Margin="20,152,0,0"/>
-        </Grid>
+        <Frame Grid.Row="1" x:Name="Main" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
