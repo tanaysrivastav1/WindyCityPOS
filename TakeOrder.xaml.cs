@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -31,7 +32,7 @@ namespace WindyCityPOS
             SqlCommand cmd = new SqlCommand("Select main_identifier, main_name from main_cata", con);
             SqlDataReader data = cmd.ExecuteReader();
             //LoadButton
-            for (int i = 1; i < 12; i++)
+            for (int i = 1; i < data.FieldCount; i++)
             {
 
                 while (data.Read())
@@ -42,8 +43,9 @@ namespace WindyCityPOS
                     //b.HorizontalAlignment = HorizontalAlignment.Left;
                     b.Width = 125;
                     b.Height = 50;
-                    //b.Margin = (20, 0, 0, 0);
+                    b.Margin = new Thickness(0, 20, 0, 0);
                     b.FontSize = 22;
+                    b.Click += new RoutedEventHandler(button_click);
                     //add buttons to the stack panel
                     sp.Children.Add(b);
 
@@ -52,6 +54,42 @@ namespace WindyCityPOS
             }
             con.Close();
 
+        }
+
+        void button_click(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+
+            //if user pressed subs
+            if (btn.Name == "Subs")
+            { 
+                Debug.WriteLine("button pressed bitch");
+                SqlConnection con = new SqlConnection("Data Source=windycityserver.database.windows.net;Initial Catalog=food;Persist Security Info=True;User ID=webappAdmin;Password=appAdmin2001");
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Select ID, sub_name, price, quantity from sub_cat", con);
+                SqlDataReader data = cmd.ExecuteReader();
+
+                //for (int i = 1; i < 21; i++)
+               // {
+                    while (data.Read())
+                    {
+                        
+
+                        Button b = new Button();
+                        //b.Name = data.GetValue(1).ToString();
+                        b.Content = data.GetValue(1).ToString();
+                        //b.HorizontalAlignment = HorizontalAlignment.Left;
+                        b.Width = 125;
+                        b.Height = 50;
+                        b.Margin = new Thickness(0, 20, 0, 0);
+                        b.FontSize = 22;
+                        //add buttons to the stack panel
+                        subs.Children.Add(b);
+                    }
+              //  }
+                con.Close();
+
+            }
         }
 
         //Create property boolean to update the form
