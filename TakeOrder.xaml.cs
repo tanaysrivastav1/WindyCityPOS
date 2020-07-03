@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -73,23 +74,72 @@ namespace WindyCityPOS
                // {
                     while (data.Read())
                     {
-                        
 
                         Button b = new Button();
-                        //b.Name = data.GetValue(1).ToString();
+                        //PRICE
+                        //b.Name = data.GetValue(2).ToString();
+                        //name
                         b.Content = data.GetValue(1).ToString();
+                        b.Tag = data.GetValue(2);
+                        
                         //b.HorizontalAlignment = HorizontalAlignment.Left;
                         b.Width = 125;
                         b.Height = 50;
                         b.Margin = new Thickness(0, 20, 0, 0);
                         b.FontSize = 22;
+                        b.Click += new RoutedEventHandler(subs_button_click);
                         //add buttons to the stack panel
                         subs.Children.Add(b);
+
+                    if (AddNewPressed == true)
+                    {
+                        subs.Children.Remove(b);
                     }
+                }
               //  }
                 con.Close();
 
             }
+            
+        }
+
+
+        void subs_button_click(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            //isPressed = true;
+
+            using (SqlConnection con = new SqlConnection(ApplicationSetting.ConnectionString()))
+            {
+                using (SqlCommand cmd = new SqlCommand("usp_Orders_InsertNewOrder", con))
+                {
+                    SqlConnection con2 = new SqlConnection("Data Source=windycityserver.database.windows.net;Initial Catalog=food;Persist Security Info=True;User ID=webappAdmin;Password=appAdmin2001");
+                    con2.Open();
+                    SqlCommand cmd2 = new SqlCommand("Select ID, sub_name, price, quantity from sub_cat", con2);
+                    SqlDataReader data = cmd2.ExecuteReader();
+                   
+                    
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@OrderItem", btn.Content);
+                    cmd.Parameters.AddWithValue("@price", btn.Tag);
+                    //will need to add qualifiers
+                    cmd.Parameters.AddWithValue("@qualifiers", 0);
+                    cmd.Parameters.AddWithValue("@ID", 0);
+                    
+
+                    con.Open();
+                    var queryResult = cmd.ExecuteScalar(); int commit = 0;
+                    if (queryResult != DBNull.Value)
+                    {
+                        commit = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+
+                    //int id = Convert.ToInt32(cmd.ExecuteScalar());
+                    MessageBox.Show(btn.Content + " has been added to order" , "Success", MessageBoxButton.OK);
+              
+            }
+            }
+
         }
 
         //Create property boolean to update the form
@@ -170,6 +220,8 @@ namespace WindyCityPOS
             }
         }
 
+       
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             //customer editor
@@ -248,5 +300,26 @@ namespace WindyCityPOS
         {
             //Address Ttext box
         }
+
+        private void AddNew_Click(object sender, RoutedEventArgs e)
+        {
+            AddNewPressed = true;
+            Debug.WriteLine(AddNewPressed);
+            //clear entries and create new order
+            OrderNumberTxtBox.Clear();
+            OrderTypeTxtBox.Clear();
+            PhoneNumberTxtBox.Clear();
+            NameTxtBox.Clear();
+            AddressTxtBox.Clear();
+            
+            
+
+            
+
+             
+           
+        }
+
+        private bool AddNewPressed = false;     
     }
 }
